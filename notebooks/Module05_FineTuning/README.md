@@ -4,7 +4,7 @@
 
 本模块聚焦“模型如何真正适配业务”。你将回答 3 个工程问题：
 
-- 何时应做全量微调，何时应选 PEFT？
+- 何时应做全量微调，何时应选 PEFT (Parameter-Efficient Fine-Tuning, 参数高效微调)？
 - 数据有限且领域变化快时，如何稳定提升效果？
 - 新任务持续加入时，如何避免模型遗忘旧能力？
 
@@ -79,7 +79,7 @@
 - LoRA (Low-Rank Adaptation)
 - Adapter Layers
 - Prefix-Tuning & Prompt-Tuning
-- QLoRA, (IA)³, BitFit
+- QLoRA (Quantized LoRA, 量化低秩适配), (IA)³, BitFit
 - 多任务 PEFT 部署
 - Hugging Face PEFT 库完整教程
 - 业务映射：用“有限显存下快速适配新活动规则”理解 PEFT 价值
@@ -88,7 +88,7 @@
 - ✅ 从零实现所有主要 PEFT 方法
 - ✅ 11 个微实践（含性能 Benchmark）
 - ✅ 8+ 个精美可视化（含 LoRA 权重分解）
-- ✅ 3 个实际应用案例（情感分析、NER、QA）
+- ✅ 3 个实际应用案例（情感分析、NER (Named Entity Recognition, 命名实体识别)、QA (Question Answering, 问答)）
 - ✅ 完整类型提示和实际性能数据
 
 **关键概念**: Parameter Efficiency, Low-Rank Decomposition, Adapter Architecture, Soft Prompts

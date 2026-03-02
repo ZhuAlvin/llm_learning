@@ -31,7 +31,7 @@
 | 章节 | 先回答的问题 | 生活化示例 | 最低完成标准 | 产出物 |
 |---|---|---|---|---|
 | `01_transfer_learning.ipynb` | 全量微调什么时候值得做？ | 新增客服标签体系上线 | 跑通一次迁移学习流程并给基线对比 | 微调基线报告 |
-| `02_parameter_efficient_finetuning.ipynb` | 显存紧张时如何做高性价比适配？ | 活动规则频繁变化，快速更新模型 | 至少完成一种 LoRA (Low-Rank Adaptation) 方案 | PEFT 对比表 |
+| `02_parameter_efficient_finetuning.ipynb` | 显存紧张时如何做高性价比适配？ | 活动规则频繁变化，快速更新模型 | 至少完成一种 LoRA (Low-Rank Adaptation, 低秩适配) 方案 | PEFT 对比表 |
 | `03_domain_adaptation.ipynb` | 领域变化时如何避免旧能力退化？ | 售后与售前政策同时更新 | 完成一次领域适配并检查遗忘程度 | 领域迁移复盘 |
 
 ---

@@ -68,7 +68,7 @@
 
 - 能解释 Query/Key/Value 与缩放点积注意力。
 - 能独立实现一个简化 Encoder 与 Decoder。
-- 能说明 Transformer 相比 RNN 的收益与代价。
+- 能说明 Transformer 相比 RNN (Recurrent Neural Network, 循环神经网络) 的收益与代价。
 - 能在一个样例上解释生成错误来源。
 
 ---

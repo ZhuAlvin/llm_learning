@@ -52,11 +52,11 @@
 **评分**: 95/100
 
 **内容**:
-- 优化器基础：SGD, Momentum, Nesterov动量
-- 自适应优化器：Adam, AdamW, RMSprop, Adafactor
+- 优化器基础：SGD (Stochastic Gradient Descent, 随机梯度下降), Momentum, Nesterov动量
+- 自适应优化器：Adam (Adaptive Moment Estimation), AdamW, RMSprop, Adafactor
 - 学习率调度：Warmup, Linear Decay, Cosine Annealing
 - 梯度累积：模拟大批次训练
-- 混合精度训练：FP16/BF16 训练技术
+- 混合精度训练：FP16 (16-bit Floating Point, 半精度浮点) / BF16 (Brain Floating Point 16) 训练技术
 - 梯度裁剪和训练稳定性
 - 完整训练流程实现
 - 业务映射：用“客服模型收敛慢/波动大”定位优化与调度问题
@@ -81,7 +81,7 @@
 - 分布式训练概述和通信原语
 - 数据并行：DataParallel, DistributedDataParallel
 - 模型并行：张量并行、流水线并行
-- ZeRO优化器：Stage 1/2/3 内存优化
+- ZeRO (Zero Redundancy Optimizer, 零冗余优化器)：Stage 1/2/3 内存优化
 - 混合并行策略：3D并行训练
 - 通信优化和故障恢复
 - 综合训练框架搭建

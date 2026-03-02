@@ -30,7 +30,7 @@
 
 | 章节 | 先回答的问题 | 生活化示例 | 最低完成标准 | 产出物 |
 |---|---|---|---|---|
-| `01_language_modeling.ipynb` | 模型如何估计下一个词或被遮蔽词？ | 预测客服用户常见追问表达 | 完成 CLM/MLM 小实验并对比困惑度 | 评估记录 |
+| `01_language_modeling.ipynb` | 模型如何估计下一个词或被遮蔽词？ | 预测客服用户常见追问表达 | 完成 CLM (Causal Language Modeling) / MLM (Masked Language Modeling) 小实验并对比困惑度 | 评估记录 |
 | `02_bert_architecture.ipynb` | 为什么 BERT 更擅长理解任务？ | 意图识别与工单分类 | 完成一个 BERT 微调分类案例 | 分类报告 |
 | `03_gpt_architecture.ipynb` | 为什么 GPT 更擅长连续生成？ | 自动回复草稿与知识问答草案 | 完成一个 GPT 生成策略对比 | 生成质量对比 |
 

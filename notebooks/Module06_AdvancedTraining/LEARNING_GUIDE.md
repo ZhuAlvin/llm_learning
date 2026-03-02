@@ -50,7 +50,7 @@
 
 在路径 B 基础上增加：
 
-- 对比 DDP/ZeRO（Data Parallel/Zero Redundancy Optimizer）
+- 对比 DDP (Distributed Data Parallel, 分布式数据并行) / ZeRO (Zero Redundancy Optimizer, 零冗余优化器)
 - 构建训练资源预算模型
 - 输出故障恢复流程草案
 

@@ -15,8 +15,8 @@
 ### 🎯 学习目标
 
 - 掌握语言建模的基本概念和评估方法
-- 理解BERT的双向编码器架构和掩码语言建模
-- 理解GPT的自回归解码器架构和生成能力
+- 理解 BERT (Bidirectional Encoder Representations from Transformers) 的双向编码器架构和掩码语言建模
+- 理解 GPT (Generative Pre-trained Transformer) 的自回归解码器架构和生成能力
 - 掌握预训练和微调的完整流程
 - 理解Few-shot Learning和In-context Learning的原理
 - 对比不同预训练模型的优劣和适用场景
@@ -55,8 +55,8 @@
 - N-gram语言模型：原理、评估、局限性
 - 神经语言模型：从RNN到Transformer
 - 困惑度（Perplexity）评估指标
-- 自回归语言建模（CLM）
-- 掩码语言建模（MLM）
+- 自回归语言建模（CLM, Causal Language Modeling）
+- 掩码语言建模（MLM, Masked Language Modeling）
 - 语言模型的应用场景
 - 业务映射：用“客服常见问法预测”理解语言建模的价值与局限
 
@@ -79,7 +79,7 @@
 **内容**:
 - Encoder-only架构设计
 - 掩码语言建模（MLM）原理与实现
-- 下一句预测（NSP）任务
+- 下一句预测（NSP, Next Sentence Prediction）任务
 - BERT的预训练和微调流程
 - BERT家族变体（RoBERTa, ALBERT等）
 - BERT的应用场景和局限性

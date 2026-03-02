@@ -106,7 +106,7 @@
 - Teacher Forcing训练技巧
 - Beam Search解码算法
 - 完整的机器翻译示例
-- 序列模型的评估指标（BLEU、ROUGE）
+- 序列模型的评估指标：BLEU (Bilingual Evaluation Understudy)、ROUGE (Recall-Oriented Understudy for Gisting Evaluation)
 - 业务映射：用“用户问题改写为标准工单摘要”理解 Seq2Seq 闭环
 
 **亮点**:

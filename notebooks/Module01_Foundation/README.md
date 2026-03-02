@@ -72,8 +72,8 @@
 **内容**:
 - 感知机模型：线性分类、决策边界
 - 多层神经网络：前向传播、网络架构
-- 激活函数：Sigmoid, Tanh, ReLU, Softmax
-- 损失函数：MSE, Cross-Entropy, Hinge Loss
+- 激活函数：Sigmoid、Tanh、ReLU (Rectified Linear Unit, 修正线性单元)、Softmax
+- 损失函数：MSE (Mean Squared Error, 均方误差)、Cross-Entropy (交叉熵)、Hinge Loss (合页损失)
 - 模型评估：准确率、精确率、召回率、F1值
 - 生活化场景：用“差评识别”理解决策边界与误分类成本
 
@@ -144,10 +144,10 @@
 **内容**:
 - 深度学习定义：表示学习与层次化特征
 - 深度 vs 宽度：通用近似定理与实践权衡
-- 常见架构概览：MLP、CNN、RNN、Transformer
+- 常见架构概览：MLP (Multi-Layer Perceptron, 多层感知机)、CNN (Convolutional Neural Network, 卷积神经网络)、RNN (Recurrent Neural Network, 循环神经网络)、Transformer
 - 训练三要素：数据、算力、算法（含 Scaling Law）
 - 过拟合与正则化：L1/L2、Dropout、Early Stopping
-- Batch Normalization：原理、推导与实践
+- BN (Batch Normalization, 批归一化)：原理、推导与实践
 - 生活化场景：比较“浅层快上线”与“深层高精度”在真实需求下的取舍
 
 **亮点**:
