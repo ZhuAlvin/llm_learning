@@ -3,7 +3,7 @@
 > 从零开始，系统掌握大语言模型的理论与实践
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Python](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![Python](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![Jupyter](https://img.shields.io/badge/jupyter-notebook-orange.svg)](https://jupyter.org/)
 [![Quality](https://img.shields.io/badge/quality-93.7%2F100-brightgreen.svg)](docs/quality_reports/)
 
@@ -169,7 +169,7 @@
 
 ### 环境要求
 
-- Python 3.8+
+- Python 3.9+
 - CUDA 11.8+ (可选，用于 GPU 加速)
 - 8GB+ RAM (16GB+ 推荐)
 
@@ -177,7 +177,7 @@
 
 ```bash
 # 1. 克隆仓库
-git clone https://github.com/yourusername/llm-learning-guide.git
+git clone <your-repo-url>
 cd llm-learning-guide
 
 # 2. 创建虚拟环境
@@ -411,7 +411,7 @@ llm-learning-guide/
 
 - **Issues**: [GitHub Issues](../../issues)
 - **Discussions**: [GitHub Discussions](../../discussions)
-- **Email**: your.email@example.com
+- **Email**: 请通过 GitHub Issues 联系
 
 ---
 
