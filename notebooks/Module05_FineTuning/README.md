@@ -58,6 +58,10 @@
 - 超参数选择指南
 - 完整的文本分类微调流程
 - 业务映射：用“新增客服标签分类”理解全量微调流程
+**业务问题映射**：
+- “新增业务标签后，模型要重新训练多久？” -> 全量微调 vs 冻结层策略
+- “学习率设多少既有效又不破坏原有能力？” -> 分层学习率与 Warmup
+
 
 **亮点**:
 - ✅ 5 个微实践 + 1 个 Capstone 项目
@@ -76,13 +80,17 @@
 **评分**: 100/100 🏆
 
 **内容**:
-- LoRA (Low-Rank Adaptation)
+- LoRA (Low-Rank Adaptation, 低秩适配)
 - Adapter Layers
 - Prefix-Tuning & Prompt-Tuning
-- QLoRA (Quantized LoRA, 量化低秩适配), (IA)³, BitFit
+- QLoRA (Quantized LoRA, 量化低秩适配)、(IA)³ (Infused Adapter by Inhibiting and Amplifying Inner Activations)、BitFit (Bias-terms Fine-Tuning, 偏置项微调)
 - 多任务 PEFT 部署
 - Hugging Face PEFT 库完整教程
 - 业务映射：用“有限显存下快速适配新活动规则”理解 PEFT 价值
+**业务问题映射**：
+- “显存只够 8GB，怎么微调 7B 模型？” -> LoRA 低秩适配
+- “多个活动规则同时上线如何切换？” -> 多任务 PEFT 部署
+
 
 **亮点**:
 - ✅ 从零实现所有主要 PEFT 方法
@@ -103,13 +111,17 @@
 
 **内容**:
 - 领域偏移检测与分析
-- DAPT (Domain-Adaptive Pre-training)
-- TAPT (Task-Adaptive Pre-training)
+- DAPT (Domain-Adaptive Pre-training, 领域自适应预训练)
+- TAPT (Task-Adaptive Pre-training, 任务自适应预训练)
 - 灾难性遗忘问题
-- EWC (Elastic Weight Consolidation)
+- EWC (Elastic Weight Consolidation, 弹性权重巩固)
 - Experience Replay
 - 多领域学习架构
 - 业务映射：用“售后任务新旧政策并存”理解持续学习挑战
+**业务问题映射**：
+- “售后新政策上线后旧知识全忘了？” -> 灾难性遗忘与 EWC
+- “跨品类迁移效果差？” -> DAPT + TAPT 领域适应
+
 
 **亮点**:
 - ✅ 7 个完整微实践（含完整 DAPT/EWC 实现）
@@ -166,7 +178,7 @@
 ### 项目 3: 多任务学习系统
 **难度**: ⭐⭐⭐⭐⭐
 **技术**: 多任务 PEFT + 持续学习
-**数据集**: GLUE benchmark
+**数据集**: GLUE (General Language Understanding Evaluation, 通用语言理解评估) benchmark
 **时间**: 8-10 小时
 
 ---

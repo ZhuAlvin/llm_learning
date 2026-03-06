@@ -21,9 +21,9 @@
 
 ### ✅ 完成本模块后的可交付产出
 
-- 一份前沿技术雷达图（收益、风险、成熟度、成本）
-- 一份 90 天实验路线图（优先级与验收指标）
-- 一份研究跟踪机制（论文筛选、复现、结论沉淀）
+- 一份面向客服场景的前沿技术雷达图（收益、风险、成熟度、成本）
+- 一份客服助理能力升级的 90 天实验路线图（优先级与验收指标）
+- 一份研究跟踪机制（论文筛选、客服场景复现、结论沉淀）
 
 ### ⏱️ 预计学习时间
 
@@ -31,9 +31,9 @@
 
 ### 📈 学习曲线设计
 
-- 第 1 段（9.1）：先看架构方向与复杂度收益
-- 第 2 段（9.2）：再看对齐训练与安全边界
-- 第 3 段（9.3）：最后构建研究视角与长期路线
+- 第 1 段（9.1）：先看哪些新架构能降低客服长对话的推理成本
+- 第 2 段（9.2）：再看如何让客服助理的回复更安全可控
+- 第 3 段（9.3）：最后构建客服场景的研究视角与长期技术路线
 
 ### 🧭 每章建议阅读顺序
 
@@ -50,11 +50,11 @@
 **核心内容**：
 - **架构演进**：从 Transformer (2017) 到混合架构 (2024)
 - **复杂度分析**：Transformer 的二次复杂度瓶颈
-- **Mixture-of-Experts**：稀疏激活和条件计算
-- **State Space Models**：线性复杂度的序列建模
-- **长上下文技术**：稀疏注意力、RoPE 缩放、循环记忆
+- **MoE (Mixture-of-Experts, 混合专家模型)**：稀疏激活和条件计算
+- **SSM (State Space Models, 状态空间模型)**：线性复杂度的序列建模
+- **长上下文技术**：稀疏注意力、RoPE (Rotary Position Embedding, 旋转位置编码) 缩放、循环记忆
 - **多模态架构**：视觉-语言融合模型
-- **高效注意力**：MQA、GQA、Flash Attention
+- **高效注意力**：MQA (Multi-Query Attention, 多查询注意力)、GQA (Grouped Query Attention, 分组查询注意力)、Flash Attention
 - **未来方向**：混合架构、自适应计算、架构搜索
 
 **业务问题映射**：
@@ -71,7 +71,7 @@
 
 **关键技术**：
 - MoE：Switch Transformer, GLaM, GPT-4
-- SSM：Mamba, S4, RWKV
+- SSM：Mamba, S4 (Structured State Spaces for Sequence Modeling, 结构化状态空间序列模型), RWKV
 - 长上下文：Longformer, BigBird, Transformer-XL
 - 高效注意力：MQA (Falcon), GQA (LLaMA-2)
 
@@ -88,17 +88,17 @@
 **评分**: 95/100 ⭐⭐⭐⭐⭐
 
 **核心内容**：
-- **对齐基础**：HHH 原则（有帮助、无害、诚实）
-- **RLHF 三阶段**：SFT → 奖励模型 → PPO 优化
-- **DPO**：直接偏好优化，跳过奖励模型
+- **对齐基础**：HHH (Helpful, Harmless, Honest, 有帮助、无害、诚实) 原则
+- **RLHF (Reinforcement Learning from Human Feedback, 人类反馈强化学习) 三阶段**：SFT (Supervised Fine-Tuning, 监督微调) → 奖励模型 → PPO (Proximal Policy Optimization, 近端策略优化) 优化
+- **DPO (Direct Preference Optimization, 直接偏好优化)**：跳过奖励模型
 - **Constitutional AI**：基于原则的自我批评和修订
 - **指令微调**：多任务训练和少样本学习
 - **安全与红队**：对抗测试和多层防御
-- **前沿范式**：RLAIF、AI 评判、最佳实践
+- **前沿范式**：RLAIF (Reinforcement Learning from AI Feedback, AI 反馈强化学习)、AI 评判、最佳实践
 
 **业务问题映射**：
-- “回答看似流畅但不安全怎么办？” -> 对齐训练与红队评估
-- “人工反馈太贵怎么办？” -> DPO/RLAIF 等低成本对齐路线
+- “客服助理推荐了违规促销话术或泄露内部价格怎么办？” -> 对齐训练与红队评估
+- “标注客服回复偏好的人力成本太高？” -> DPO/RLAIF 等低成本对齐路线
 
 **7 个微实践**：
 1. 对齐演示 - Unaligned vs Aligned 对比
@@ -132,14 +132,14 @@
 - **缩放定律**：Chinchilla 优化、参数-数据平衡
 - **涌现能力**：规模驱动的质变现象
 - **可解释性**：线性探针、注意力分析、激活分析
-- **推理与规划**：CoT、ToT、推理基准测试
+- **推理与规划**：CoT (Chain-of-Thought, 思维链)、ToT (Tree-of-Thoughts, 思维树)、推理基准测试
 - **开放问题**：六大挑战和近期突破
 - **研究资源**：论文阅读、会议、学习路线
 - **未来方向**：趋势预测和职业路径
 
 **业务问题映射**：
-- “如何避免盲目追热点？” -> 建立可量化研究评估框架
-- “如何把论文变成可复现实验？” -> 标准化实验模板与节奏
+- “新论文方法层出不穷，哪些值得在客服系统中试验？” -> 建立可量化研究评估框架
+- “论文效果很好但客服场景复现不出来？” -> 标准化实验模板与业务验收指标
 
 **7 个微实践**：
 1. 研究全景映射 - 领域概览
@@ -148,13 +148,13 @@
 4. 线性探针 - 特征提取和分类
 5. 注意力分析 - 模式可视化
 6. 激活分析 - 神经元功能理解
-7. 推理基准评估 - GSM8K、MATH 测试
+7. 推理基准评估 - GSM8K (Grade School Math 8K, 小学数学基准测试)、MATH 测试
 
 **关键技术**：
 - 缩放定律：Kaplan、Chinchilla
 - 可解释性：Probing、Attention Visualization
 - 推理：Chain-of-Thought、Tree-of-Thoughts
-- 基准测试：MMLU、HumanEval、GSM8K
+- 基准测试：MMLU (Massive Multitask Language Understanding, 大规模多任务语言理解)、HumanEval、GSM8K
 
 **适用场景**：
 - 研究方向选择
@@ -544,7 +544,7 @@ Module 9: 前沿探索
 
 **A**: 策略组合：
 
-1. **使用 GQA**：而非 MHA
+1. **使用 GQA**：而非 MHA (Multi-Head Attention, 多头注意力)
 2. **量化和剪枝**：降低精度
 3. **动态计算**：根据难度调整
 4. **针对场景优化**：不同任务不同配置

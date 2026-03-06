@@ -59,6 +59,10 @@
 - 注意力可视化与解释性
 - 自注意力的计算复杂度分析
 - 业务映射：用“客服长对话关键句定位”理解注意力权重含义
+**业务问题映射**：
+- “长对话中哪些上下文真正影响当前回复？” -> 自注意力权重分析
+- “同一句话在不同语境下含义不同如何区分？” -> 多头注意力子空间建模
+
 
 **亮点**:
 - ✅ 9 个微实践（含从零实现自注意力）
@@ -66,7 +70,7 @@
 - ✅ 完整的数学推导和直觉解释
 - ✅ 注意力热力图和交互示例
 
-**关键概念**: Self-Attention, Query-Key-Value, Scaled Dot-Product Attention, Multi-Head Attention, Attention Visualization
+**关键概念**: Self-Attention (自注意力), Query-Key-Value (查询-键-值), Scaled Dot-Product Attention (缩放点积注意力), Multi-Head Attention (多头注意力), Attention Visualization (注意力可视化)
 
 ---
 
@@ -84,6 +88,10 @@
 - 编码器的并行计算优势
 - 编码器变体与改进
 - 业务映射：用“用户表达顺序变化是否影响理解”理解位置编码作用
+**业务问题映射**：
+- “用户消息顺序打乱后理解变差？” -> 位置编码的作用与设计
+- “编码器叠多少层才够？” -> 层数-效果-成本的工程权衡
+
 
 **亮点**:
 - ✅ 7 个微实践（含位置编码实现）
@@ -91,7 +99,7 @@
 - ✅ 从零实现完整编码器
 - ✅ 性能分析和优化建议
 
-**关键概念**: Positional Encoding, Encoder Layer, Residual Connection, Layer Normalization, Parallel Computation
+**关键概念**: Positional Encoding (位置编码), Encoder Layer (编码器层), Residual Connection (残差连接), Layer Normalization (层归一化), Parallel Computation (并行计算)
 
 ---
 
@@ -109,6 +117,10 @@
 - 训练技巧：标签平滑、学习率调度
 - 完整 Transformer 模型的构建与训练
 - 业务映射：用“自动生成客服回复草稿”理解生成策略差异
+**业务问题映射**：
+- “生成的客服回复出现重复或矛盾？” -> 因果掩码与生成策略优化
+- “回复风格不稳定怎么控制？” -> 温度、Top-K/Top-P 采样参数调节
+
 
 **亮点**:
 - ✅ 8 个微实践（含束搜索实现）
@@ -116,7 +128,7 @@
 - ✅ 端到端机器翻译项目
 - ✅ 详细的训练和推理流程
 
-**关键概念**: Masked Self-Attention, Cross-Attention, Autoregressive Generation, Beam Search, Label Smoothing
+**关键概念**: Masked Self-Attention (掩码自注意力), Cross-Attention (交叉注意力), Autoregressive Generation (自回归生成), Beam Search (束搜索), Label Smoothing (标签平滑)
 
 ---
 

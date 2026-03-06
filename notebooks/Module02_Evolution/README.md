@@ -54,10 +54,14 @@
 - RNN基础：序列数据处理、循环连接
 - 梯度消失/爆炸问题分析
 - LSTM：门控机制、细胞状态、长期依赖
-- GRU：简化的门控循环单元
+- GRU (Gated Recurrent Unit, 门控循环单元)：简化的门控循环单元
 - 双向RNN：同时利用上下文信息
 - 多层RNN：深层序列建模
 - 业务映射：用“客服多轮会话意图识别”理解长期依赖问题
+**业务问题映射**：
+- “客服多轮对话到后面总是‘答非所问’？” -> 长期依赖问题与 LSTM 门控机制
+- “用户第一条消息就说了关键信息，最后回复却忽略了？” -> 梯度消失与双向 RNN
+
 
 **亮点**:
 - ✅ 7 个微实践（含RNN实现、梯度问题演示）
@@ -65,7 +69,7 @@
 - ✅ 完整的LSTM数学推导
 - ✅ 性能对比和调优建议
 
-**关键概念**: Recurrent Neural Network, Long Short-Term Memory, Gated Recurrent Unit, Vanishing Gradient, Sequence Modeling
+**关键概念**: Recurrent Neural Network (循环神经网络), Long Short-Term Memory (长短期记忆网络), Gated Recurrent Unit (门控循环单元), Vanishing Gradient (梯度消失), Sequence Modeling (序列建模)
 
 ---
 
@@ -83,6 +87,10 @@
 - 多头注意力（Multi-Head Attention）概念
 - 注意力分数计算与可视化
 - 业务映射：用“从用户长消息中定位关键信息”理解注意力价值
+**业务问题映射**：
+- “用户消息很长，哪些句子才影响回复？” -> 注意力权重定位关键信息
+- “不同用户表达差异大，如何一致理解？” -> 多头注意力捕获多维度语义
+
 
 **亮点**:
 - ✅ 8 个微实践（含不同注意力机制实现）
@@ -90,7 +98,7 @@
 - ✅ 从零实现所有注意力变体
 - ✅ 性能分析和复杂度评估
 
-**关键概念**: Attention Mechanism, Bahdanau Attention, Luong Attention, Self-Attention, Multi-Head Attention
+**关键概念**: Attention Mechanism (注意力机制), Bahdanau Attention (加法注意力), Luong Attention (乘法注意力), Self-Attention (自注意力), Multi-Head Attention (多头注意力)
 
 ---
 
@@ -106,8 +114,12 @@
 - Teacher Forcing训练技巧
 - Beam Search解码算法
 - 完整的机器翻译示例
-- 序列模型的评估指标：BLEU (Bilingual Evaluation Understudy)、ROUGE (Recall-Oriented Understudy for Gisting Evaluation)
+- 序列模型的评估指标：BLEU (Bilingual Evaluation Understudy, 双语评估指标)、ROUGE (Recall-Oriented Understudy for Gisting Evaluation, 摘要评估指标)
 - 业务映射：用“用户问题改写为标准工单摘要”理解 Seq2Seq 闭环
+**业务问题映射**：
+- “用户描述很口语化，工单需要标准格式？” -> Seq2Seq 输入-输出映射
+- “自动回复偏短或重复怎么处理？” -> Beam Search 与生成策略调优
+
 
 **亮点**:
 - ✅ 6 个微实践（含完整Seq2Seq实现）
@@ -115,7 +127,7 @@
 - ✅ 端到端机器翻译项目
 - ✅ 详细的训练和推理流程
 
-**关键概念**: Seq2Seq, Encoder-Decoder, Teacher Forcing, Beam Search, Machine Translation
+**关键概念**: Seq2Seq (序列到序列), Encoder-Decoder (编码器-解码器), Teacher Forcing (教师强制), Beam Search (束搜索), Machine Translation (机器翻译)
 
 ---
 

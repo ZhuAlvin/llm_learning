@@ -13,7 +13,7 @@
 
 ### 🎯 学习目标
 
-- 掌握 RAG 系统的完整开发流程
+- 掌握 RAG (Retrieval-Augmented Generation, 检索增强生成) 系统的完整开发流程
 - 理解 AI Agent 的架构和实现
 - 学会将 LLM 集成到前端应用
 - 构建端到端的生产级 LLM 应用
@@ -40,7 +40,7 @@
 
 ### 📊 模块内统一评估视角
 
-- 技术指标：Recall@K、NDCG、延迟、错误率
+- 技术指标：Recall@K、NDCG (Normalized Discounted Cumulative Gain, 归一化折损累计增益)、延迟、错误率
 - 业务指标：首次解决率、人工转接率、用户满意度、单次请求成本
 
 ---
@@ -53,11 +53,11 @@
 
 **核心内容**：
 - **RAG 基础理论**：理解检索增强生成的动机和数学形式
-- **文本嵌入与向量检索**：使用嵌入模型和 FAISS 构建向量索引
+- **文本嵌入与向量检索**：使用嵌入模型和 FAISS (Facebook AI Similarity Search) 构建向量索引
 - **文档处理与分块**：实现固定大小、句子、语义和重叠分块策略
-- **检索策略对比**：BM25 稀疏检索、稠密检索、混合检索和重排序
+- **检索策略对比**：BM25 (Best Matching 25, 概率检索算法) 稀疏检索、稠密检索、混合检索和重排序
 - **RAG 流水线**：上下文压缩、Prompt 构建、引用生成
-- **RAG 评估**：Recall@K、NDCG、ROUGE-L、忠实度评估
+- **RAG 评估**：Recall@K、NDCG、ROUGE-L (ROUGE: Recall-Oriented Understudy for Gisting Evaluation, 摘要评估指标)、忠实度评估
 - **高级技术**：查询扩展、Self-RAG、生产部署配置
 
 **业务问题映射**：
@@ -79,7 +79,7 @@
 - 嵌入模型：BGE-large-zh, E5-large-v2
 - 向量数据库：FAISS, Milvus, Qdrant, Pinecone
 - 检索算法：BM25, Dense Retrieval, Hybrid Search
-- 评估指标：Recall@K, MRR, NDCG, ROUGE-L
+- 评估指标：Recall@K, MRR (Mean Reciprocal Rank, 平均倒数排名), NDCG, ROUGE-L
 
 **适用场景**：
 - 企业知识库问答
@@ -95,9 +95,9 @@
 
 **核心内容**：
 - **Agent 核心架构**：感知-规划-行动-记忆四大组件
-- **ReAct 模式**：思考-行动循环的实现
+- **ReAct (Reasoning + Acting, 推理与行动) 模式**：思考-行动循环的实现
 - **工具注册表系统**：动态工具管理和调用
-- **MCP 协议**：Model Context Protocol 深入解析
+- **MCP (Model Context Protocol, 模型上下文协议)**：深入解析
 - **规划智能体**：任务分解和多步推理
 - **记忆系统**：短期、长期和工作记忆的实现
 - **多智能体协作**：层级和协作模式
@@ -140,7 +140,7 @@
 
 **核心内容**：
 - **前端架构基础**：LLM 应用的通信模式
-- **流式响应 (SSE)**：Server-Sent Events 实现
+- **流式响应 SSE (Server-Sent Events, 服务器发送事件)**：实现
 - **WebSocket 通信**：双向实时聊天
 - **Streamlit 应用**：纯 Python 快速原型
 - **Gradio 应用**：ML 模型演示界面
@@ -149,7 +149,7 @@
 - **全栈部署**：Vercel、Railway、Docker 部署方案
 
 **业务问题映射**：
-- “用户为何觉得慢？” -> 首字延迟（TTFT）与流式反馈
+- “用户为何觉得慢？” -> 首字延迟 TTFT (Time To First Token, 首个令牌响应时间) 与流式反馈
 - “怎么减少放弃率？” -> 可中断生成 + 失败重试 + 状态可见
 
 **7 个微实践**：

@@ -5,7 +5,7 @@
 本模块是全课程的起点，目标不是“堆公式”，而是建立可迁移的底层直觉：为什么模型会学会、为什么会学偏、为什么会训练不稳。
 
 为降低抽象感，本模块使用统一生活化主线：
-`电商客服消息分类与回复建议`。你会逐步看到数学、模型和训练技巧如何直接影响业务效果。
+`电商客服智能助理`。你会逐步看到数学、模型和训练技巧如何直接影响业务效果。
 
 ### 🎯 学习目标
 
@@ -17,9 +17,9 @@
 
 ### ✅ 完成本模块后的可交付产出
 
-- 一个可运行的文本分类最小模型（含训练与评估）
-- 一份训练诊断记录（过拟合、学习率、梯度稳定性）
-- 一套从 NumPy 到 PyTorch 的实现对照笔记
+- 一个可运行的客服消息分类最小模型（含训练与评估）
+- 一份客服模型训练诊断记录（过拟合、学习率、梯度稳定性）
+- 一套从 NumPy 到 PyTorch 的客服分类实现对照笔记
 
 ### ⏱️ 预计学习时间
 
@@ -27,9 +27,9 @@
 
 ### 📈 学习曲线设计（平缓爬坡）
 
-- 第 1 段（1.1-1.2）：先理解“如何表达问题”和“模型如何做判断”
-- 第 2 段（1.3-1.4）：再理解“模型如何学习”和“如何高效实现”
-- 第 3 段（1.5）：最后整合为“可训练、可比较、可解释”的完整实验
+- 第 1 段（1.1-1.2）：先理解”如何用向量表达客服消息”和”模型如何判断消息类别”
+- 第 2 段（1.3-1.4）：再理解”客服分类模型如何学习”和”如何用 PyTorch 高效实现”
+- 第 3 段（1.5）：最后整合为”可训练、可比较、可解释”的客服分类完整实验
 
 ### 🧭 每章建议阅读顺序
 
@@ -49,9 +49,13 @@
 - 线性代数：向量运算、矩阵操作、特征值分解
 - 微积分：导数、偏导数、梯度、梯度下降
 - 概率论：概率分布、期望、方差、贝叶斯定理
-- 信息论：熵、交叉熵、KL散度
+- 信息论：熵、交叉熵、KL (Kullback-Leibler) 散度
 - 数值计算：稳定性、数值误差、优化技巧
 - 生活化场景：用“客服消息优先级排序”理解向量、相似度和损失函数
+**业务问题映射**：
+- “客服消息相似度为什么算不准？” -> 向量内积+余弦相似度校准
+- “损失函数选错会怎样？” -> 交叉熵 vs MSE 对分类效果的影响
+
 
 **亮点**:
 - ✅ 8 个微实践（含矩阵运算、梯度计算）
@@ -59,7 +63,7 @@
 - ✅ 完整的数学公式推导
 - ✅ 实用的数值计算技巧
 
-**关键概念**: Linear Algebra, Calculus, Probability, Information Theory, Gradient Descent
+**关键概念**: Linear Algebra (线性代数), Calculus (微积分), Probability (概率论), Information Theory (信息论), Gradient Descent (梯度下降)
 
 ---
 
@@ -76,6 +80,10 @@
 - 损失函数：MSE (Mean Squared Error, 均方误差)、Cross-Entropy (交叉熵)、Hinge Loss (合页损失)
 - 模型评估：准确率、精确率、召回率、F1值
 - 生活化场景：用“差评识别”理解决策边界与误分类成本
+**业务问题映射**：
+- “差评和退货投诉混淆怎么办？” -> 决策边界调整与误分类成本加权
+- “分类置信度不可信怎么排查？” -> Softmax 校准与模型评估指标
+
 
 **亮点**:
 - ✅ 6 个微实践（含感知机实现、激活函数对比）
@@ -83,7 +91,7 @@
 - ✅ 从零实现多层神经网络
 - ✅ 完整的模型评估流程
 
-**关键概念**: Perceptron, Neural Network, Activation Function, Loss Function, Model Evaluation
+**关键概念**: Perceptron (感知机), Neural Network (神经网络), Activation Function (激活函数), Loss Function (损失函数), Model Evaluation (模型评估)
 
 ---
 
@@ -100,6 +108,10 @@
 - 梯度消失与爆炸问题
 - 优化技巧：梯度裁剪、权重初始化
 - 生活化场景：用“客服回复建议模型训练失败”定位梯度问题
+**业务问题映射**：
+- “客服意图分类模型训练好几个小时 loss 不降怎么办？” -> 梯度消失定位与权重初始化策略
+- “客服回复模型学习率调大直接 NaN？” -> 梯度爆炸检测与梯度裁剪
+
 
 **亮点**:
 - ✅ 7 个微实践（含手动反向传播、梯度检查）
@@ -107,7 +119,7 @@
 - ✅ 从零实现完整的反向传播
 - ✅ 详细的数学推导和直觉解释
 
-**关键概念**: Backpropagation, Chain Rule, Computational Graph, Gradient Flow, Weight Initialization
+**关键概念**: Backpropagation (反向传播), Chain Rule (链式法则), Computational Graph (计算图), Gradient Flow (梯度流), Weight Initialization (权重初始化)
 
 ---
 
@@ -121,9 +133,13 @@
 - Tensor操作：创建、索引、运算
 - 自动微分：autograd机制、计算图
 - 模型构建：nn.Module, 层定义
-- 优化器：SGD, Adam, 学习率调度
+- 优化器：SGD (Stochastic Gradient Descent, 随机梯度下降), Adam (Adaptive Moment Estimation, 自适应矩估计), 学习率调度
 - 数据加载：Dataset, DataLoader
 - 生活化场景：把前面 NumPy 原型迁移为可复用训练脚本
+
+**业务问题映射**：
+- “客服分类的 NumPy 原型到上线迭代太慢？” -> PyTorch autograd + DataLoader 工程加速
+- “训练好的客服模型跑完就丢了怎么办？” -> 模型保存、加载与版本管理
 
 **亮点**:
 - ✅ 10 个微实践（含张量操作、自动微分）
@@ -131,7 +147,7 @@
 - ✅ 完整的模型训练流程
 - ✅ 与NumPy实现的对比
 
-**关键概念**: PyTorch, Tensor, Autograd, nn.Module, Optimizer, DataLoader
+**关键概念**: PyTorch, Tensor (张量), Autograd (自动微分), nn.Module (神经网络模块), Optimizer (优化器), DataLoader (数据加载器)
 
 ---
 
@@ -145,10 +161,14 @@
 - 深度学习定义：表示学习与层次化特征
 - 深度 vs 宽度：通用近似定理与实践权衡
 - 常见架构概览：MLP (Multi-Layer Perceptron, 多层感知机)、CNN (Convolutional Neural Network, 卷积神经网络)、RNN (Recurrent Neural Network, 循环神经网络)、Transformer
-- 训练三要素：数据、算力、算法（含 Scaling Law）
+- 训练三要素：数据、算力、算法（含 Scaling Law (缩放定律)）
 - 过拟合与正则化：L1/L2、Dropout、Early Stopping
 - BN (Batch Normalization, 批归一化)：原理、推导与实践
 - 生活化场景：比较“浅层快上线”与“深层高精度”在真实需求下的取舍
+**业务问题映射**：
+- “客服分类用深层模型精度更高但训练不稳？” -> BN + Dropout + 正则化组合策略
+- “客服系统线上资源有限该用浅层还是深层？” -> 成本-精度 trade-off 判断框架
+
 
 **亮点**:
 - ✅ 7 个微实践（含层次特征可视化、正则化对比、BN 效果验证）
@@ -157,7 +177,7 @@
 - ✅ 综合项目：浅层 vs 深层网络在 MNIST 上的全面性能对比
 - ✅ 5 道思考题 + 详细参考答案
 
-**关键概念**: Deep Learning, Representation Learning, Universal Approximation, Regularization, Batch Normalization, Dropout
+**关键概念**: Deep Learning (深度学习), Representation Learning (表示学习), Universal Approximation (通用近似), Regularization (正则化), Batch Normalization (批归一化), Dropout (随机失活)
 
 ---
 

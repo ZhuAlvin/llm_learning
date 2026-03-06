@@ -18,7 +18,7 @@
 - 理解 BERT (Bidirectional Encoder Representations from Transformers) 的双向编码器架构和掩码语言建模
 - 理解 GPT (Generative Pre-trained Transformer) 的自回归解码器架构和生成能力
 - 掌握预训练和微调的完整流程
-- 理解Few-shot Learning和In-context Learning的原理
+- 理解 Few-shot Learning (少样本学习) 和 In-context Learning (上下文学习) 的原理
 - 对比不同预训练模型的优劣和适用场景
 
 ### ✅ 完成本模块后的可交付产出
@@ -55,10 +55,14 @@
 - N-gram语言模型：原理、评估、局限性
 - 神经语言模型：从RNN到Transformer
 - 困惑度（Perplexity）评估指标
-- 自回归语言建模（CLM, Causal Language Modeling）
-- 掩码语言建模（MLM, Masked Language Modeling）
+- 自回归语言建模 CLM (Causal Language Modeling, 因果语言建模)
+- 掩码语言建模 MLM (Masked Language Modeling, 掩码语言建模)
 - 语言模型的应用场景
 - 业务映射：用“客服常见问法预测”理解语言建模的价值与局限
+**业务问题映射**：
+- “模型为什么能预测用户下一句可能说什么？” -> 语言模型概率建模
+- “预测准确度怎么量化？” -> 困惑度评估与业务可用阈值
+
 
 **亮点**:
 - ✅ 6 个微实践（含n-gram实现、困惑度计算）
@@ -79,11 +83,15 @@
 **内容**:
 - Encoder-only架构设计
 - 掩码语言建模（MLM）原理与实现
-- 下一句预测（NSP, Next Sentence Prediction）任务
+- 下一句预测 NSP (Next Sentence Prediction, 下一句预测) 任务
 - BERT的预训练和微调流程
 - BERT家族变体（RoBERTa, ALBERT等）
 - BERT的应用场景和局限性
 - 业务映射：用“意图识别与文本分类”理解 BERT 的理解优势
+**业务问题映射**：
+- “客服消息意图分类效果如何快速提升？” -> BERT 预训练迁移到分类任务
+- “同一句话在不同上下文中含义不同？” -> 双向编码的上下文理解优势
+
 
 **亮点**:
 - ✅ 7 个微实践（含MLM实现、BERT微调）
@@ -110,6 +118,10 @@
 - GPT家族演化（GPT-1到GPT-4）
 - GPT的应用场景和局限性
 - 业务映射：用“自动生成客服回复草稿”理解 GPT 的生成优势
+**业务问题映射**：
+- “如何让模型自动草拟客服回复？” -> GPT 自回归生成能力
+- “给几个示例就能做新任务？” -> Few-shot / In-context Learning
+
 
 **亮点**:
 - ✅ 8 个微实践（含文本生成、few-shot演示）
@@ -246,7 +258,7 @@
 **A**: 核心区别：
 - **架构**：BERT是Encoder-only（双向），GPT是Decoder-only（单向）
 - **训练目标**：BERT使用MLM，GPT使用自回归语言建模
-- **擅长任务**：BERT擅长理解任务（分类、NER、QA），GPT擅长生成任务（文本生成、对话）
+- **擅长任务**：BERT擅长理解任务（分类、NER (Named Entity Recognition, 命名实体识别)、QA (Question Answering, 问答)），GPT擅长生成任务（文本生成、对话）
 - **使用方式**：BERT需要微调，GPT可以few-shot学习
 
 ### Q2: 为什么预训练模型如此有效？
@@ -262,7 +274,7 @@
 **A**: 常用评估指标：
 - **困惑度（Perplexity）**：衡量模型预测的不确定性
 - **准确率**：针对特定任务的性能
-- **BLEU/ROUGE**：文本生成任务
+- **BLEU (Bilingual Evaluation Understudy, 双语评估指标) / ROUGE (Recall-Oriented Understudy for Gisting Evaluation, 摘要评估指标)**：文本生成任务
 - **人类评估**：主观质量评估
 - **Few-shot性能**：大模型的泛化能力
 
