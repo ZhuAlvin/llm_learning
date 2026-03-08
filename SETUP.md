@@ -157,7 +157,53 @@ python scripts/test_environment.py
 
 ---
 
-## 7. 常见问题
+## 7. 平台兼容性
+
+### 7.1 Intel Mac (x86_64) 重要限制
+
+PyTorch **2.3+** 已停止为 Intel Mac 提供 PyPI 预编译包，最高可用版本为 **2.2.2**。
+由此产生以下连锁版本约束：
+
+| 包 | Intel Mac 约束 | 原因 |
+|---|---|---|
+| `torch` | <= 2.2.2 | PyPI 无更高版本 wheel |
+| `numpy` | < 2.0.0 | torch 2.2.x 使用 NumPy 1.x ABI 编译，运行时会崩溃 |
+| `transformers` | < 5.0.0 | 5.x 硬性要求 torch >= 2.4 |
+
+**实际可用版本组合（已验证）**：
+
+```
+torch==2.2.2
+numpy==1.26.4
+transformers==4.57.6
+```
+
+> Apple Silicon Mac (M1/M2/M3/M4) 和 Linux/Windows 用户不受此限制，
+> 可直接安装最新版 PyTorch。
+
+### 7.2 安装后验证
+
+```bash
+source .venv/bin/activate
+python -c "
+import torch; print('torch:', torch.__version__)
+import numpy; print('numpy:', numpy.__version__)
+import transformers; print('transformers:', transformers.__version__)
+x = torch.randn(3, 3)
+print('tensor test:', x.shape, '- OK')
+"
+```
+
+如果看到 `_ARRAY_API not found` 或 `NumPy 2.x cannot be run` 错误，
+说明 NumPy 版本过高，需降级：
+
+```bash
+pip install "numpy<2"
+```
+
+---
+
+## 8. 常见问题
 
 ### Q1: 安装很慢怎么办？
 
@@ -210,7 +256,7 @@ python -m ipykernel install --user --name=llm-guide
 
 ---
 
-## 8. 维护建议
+## 9. 维护建议
 
 - 每次拉取新代码后，先执行：
   - `pip install -r requirements.txt`

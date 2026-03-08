@@ -298,9 +298,9 @@ Module 5 (PEFT重点) → Module 7 → Module 8
 
 ### 核心库
 
-- **PyTorch** 2.0+ - 深度学习框架
-- **Transformers** 4.30+ - Hugging Face 模型库
-- **NumPy** - 数值计算
+- **PyTorch** 2.0+ - 深度学习框架（Intel Mac 最高 2.2.2，详见 [SETUP.md](SETUP.md#71-intel-mac-x86_64-重要限制)）
+- **Transformers** 4.35+ (< 5.0) - Hugging Face 模型库
+- **NumPy** 1.24+ (< 2.0) - 数值计算（需与 PyTorch 版本匹配）
 - **Matplotlib/Seaborn** - 可视化
 
 ### 应用开发
