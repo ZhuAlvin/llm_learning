@@ -49,7 +49,6 @@
 **文件**: `01_advanced_optimization.ipynb`
 **时长**: 3-4 小时
 **难度**: ⭐⭐⭐⭐
-**评分**: 95/100
 
 **内容**:
 - 优化器基础：SGD (Stochastic Gradient Descent, 随机梯度下降), Momentum, Nesterov动量
@@ -79,7 +78,6 @@
 **文件**: `02_distributed_training.ipynb`
 **时长**: 3-4 小时
 **难度**: ⭐⭐⭐⭐
-**评分**: 95/100
 
 **内容**:
 - 分布式训练概述和通信原语
@@ -109,7 +107,6 @@
 **文件**: `03_efficient_training.ipynb`
 **时长**: 3-4 小时
 **难度**: ⭐⭐⭐⭐
-**评分**: 95/100
 
 **内容**:
 - GPU内存分析和瓶颈识别
@@ -327,13 +324,13 @@
 
 ## 📈 模块质量
 
-| Notebook | 评分 | 状态 |
-|----------|------|------|
-| 01_advanced_optimization | 95/100 | ⭐⭐⭐⭐⭐ |
-| 02_distributed_training | 95/100 | ⭐⭐⭐⭐⭐ |
-| 03_efficient_training | 95/100 | ⭐⭐⭐⭐⭐ |
+| Notebook | 状态 |
+|----------|------|
+| 01_advanced_optimization | ⭐⭐⭐⭐⭐ |
+| 02_distributed_training | ⭐⭐⭐⭐⭐ |
+| 03_efficient_training | ⭐⭐⭐⭐⭐ |
 
-**模块平均分**: 95/100 ⭐⭐⭐⭐⭐
+**模块平均分**: ⭐⭐⭐⭐⭐
 
 ---
 

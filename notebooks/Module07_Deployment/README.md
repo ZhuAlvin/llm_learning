@@ -51,7 +51,6 @@
 **文件**: `01_inference_optimization.ipynb`
 **时长**: 3-4 小时
 **难度**: ⭐⭐⭐⭐
-**评分**: 94/100
 
 **内容**:
 - 推理性能分析：延迟、吞吐量、内存使用
@@ -81,7 +80,6 @@
 **文件**: `02_model_serving.ipynb`
 **时长**: 3-4 小时
 **难度**: ⭐⭐⭐⭐
-**评分**: 94/100
 
 **内容**:
 - REST API 基础和 FastAPI 生产服务器
@@ -111,7 +109,6 @@
 **文件**: `03_production_best_practices.ipynb`
 **时长**: 2-3 小时
 **难度**: ⭐⭐⭐⭐
-**评分**: 93/100
 
 **内容**:
 - MLOps基础：生命周期、成熟度模型
@@ -355,13 +352,13 @@
 
 ## 📈 模块质量
 
-| Notebook | 评分 | 状态 |
-|----------|------|------|
-| 01_inference_optimization | 94/100 | ⭐⭐⭐⭐⭐ |
-| 02_model_serving | 94/100 | ⭐⭐⭐⭐⭐ |
-| 03_production_best_practices | 93/100 | ⭐⭐⭐⭐ |
+| Notebook | 状态 |
+|----------|------|
+| 01_inference_optimization | ⭐⭐⭐⭐⭐ |
+| 02_model_serving | ⭐⭐⭐⭐⭐ |
+| 03_production_best_practices | ⭐⭐⭐⭐ |
 
-**模块平均分**: 94/100 ⭐⭐⭐⭐⭐
+**模块平均分**: ⭐⭐⭐⭐⭐
 
 ---
 

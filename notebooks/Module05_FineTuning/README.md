@@ -48,7 +48,6 @@
 **文件**: `01_transfer_learning.ipynb`
 **时长**: 3-4 小时
 **难度**: ⭐⭐⭐
-**评分**: 92-94/100
 
 **内容**:
 - 迁移学习理论与数学表示
@@ -77,7 +76,6 @@
 **文件**: `02_parameter_efficient_finetuning.ipynb`
 **时长**: 4-5 小时
 **难度**: ⭐⭐⭐⭐
-**评分**: 100/100 🏆
 
 **内容**:
 - LoRA (Low-Rank Adaptation, 低秩适配)
@@ -107,7 +105,6 @@
 **文件**: `03_domain_adaptation.ipynb`
 **时长**: 4-5 小时
 **难度**: ⭐⭐⭐⭐
-**评分**: 88+/100
 
 **内容**:
 - 领域偏移检测与分析
@@ -298,13 +295,13 @@
 
 ## 📈 模块质量
 
-| Notebook | 评分 | 状态 |
-|----------|------|------|
-| 01_transfer_learning | 92-94/100 | ⭐⭐⭐⭐⭐ |
-| 02_parameter_efficient_finetuning | 100/100 | ⭐⭐⭐⭐⭐ |
-| 03_domain_adaptation | 88+/100 | ⭐⭐⭐⭐⭐ |
+| Notebook | 状态 |
+|----------|------|
+| 01_transfer_learning | ⭐⭐⭐⭐⭐ |
+| 02_parameter_efficient_finetuning | ⭐⭐⭐⭐⭐ |
+| 03_domain_adaptation | ⭐⭐⭐⭐⭐ |
 
-**模块平均分**: 93+/100 🏆
+**模块质量**: ⭐⭐⭐⭐⭐ 🏆
 
 ---
 
