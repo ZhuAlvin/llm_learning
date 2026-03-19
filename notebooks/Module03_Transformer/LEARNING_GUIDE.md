@@ -32,9 +32,9 @@
 
 | 章节 | 先回答的问题 | 生活化示例 | 最低完成标准 | 产出物 |
 |---|---|---|---|---|
-| `01_self_attention.ipynb` | 为什么“全局关注”比局部记忆更稳？ | 从长会话中定位真正影响回复的句子 | 跑通多头注意力并可视化 1 个样本 | 注意力解释图 |
-| `02_transformer_encoder.ipynb` | 词序信息如何注入模型？ | 同样语义不同语序对分类的影响 | 实现位置编码 + Encoder 堆叠 | 编码器模块代码 |
-| `03_transformer_decoder.ipynb` | 生成时如何避免“偷看未来”？ | 自动回复草稿逐词生成过程 | 完成掩码解码并比较两种解码策略 | 生成策略对比报告 |
+| [`01_self_attention.ipynb`](./01_self_attention.ipynb) | 为什么”全局关注”比局部记忆更稳？ | 从长会话中定位真正影响回复的句子 | 跑通多头注意力并可视化 1 个样本 | 注意力解释图 |
+| [`02_transformer_encoder.ipynb`](./02_transformer_encoder.ipynb) | 词序信息如何注入模型？ | 同样语义不同语序对分类的影响 | 实现位置编码 + Encoder 堆叠 | 编码器模块代码 |
+| [`03_transformer_decoder.ipynb`](./03_transformer_decoder.ipynb) | 生成时如何避免”偷看未来”？ | 自动回复草稿逐词生成过程 | 完成掩码解码并比较两种解码策略 | 生成策略对比报告 |
 
 ---
 

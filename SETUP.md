@@ -110,6 +110,39 @@ if torch.cuda.is_available():
     print(f"GPU name: {torch.cuda.get_device_name(0)}")
 ```
 
+### 4.4 Apple Silicon (M1/M2/M3) 配置
+
+Apple Silicon 芯片使用 Metal Performance Shaders (MPS) 而非 CUDA，配置方式不同。
+
+#### 检查芯片类型
+```bash
+uname -m  # 输出 arm64 则为 Apple Silicon
+```
+
+#### 安装 PyTorch（支持 MPS）
+```bash
+# Apple Silicon 直接使用标准 PyTorch，无需 CUDA 版本
+pip install torch torchvision
+```
+
+#### 验证 MPS 可用性
+```python
+import torch
+print(f"MPS available: {torch.backends.mps.is_available()}")
+print(f"MPS built: {torch.backends.mps.is_built()}")
+
+# 使用 MPS 设备
+if torch.backends.mps.is_available():
+    device = torch.device("mps")
+    print(f"Using device: {device}")
+```
+
+#### 注意事项
+- MPS 加速适用于 Module 1-5 的大多数实验
+- 部分高级操作（如 Flash Attention、某些量化方法）在 MPS 上支持有限，可回退 CPU 运行
+- `nvidia-smi` 在 Apple Silicon 上**无效**，请使用 `sudo powermetrics --samplers gpu_power` 查看 GPU 使用情况
+- Module 6 分布式训练相关内容建议在云端 GPU 环境（如 Colab）运行
+
 ---
 
 ## 5. 数据与可选依赖
@@ -125,6 +158,8 @@ python scripts/download_datasets.py
 ```bash
 pip install chromadb langchain llama-index
 ```
+
+> **注意**：以上组件是 Module 8 (`01_rag_systems.ipynb`) 的运行依赖，不安装将导致 `ImportError`。如只学习 Module 1-7，可跳过此步骤。
 
 ### 5.3 实验追踪（可选）
 

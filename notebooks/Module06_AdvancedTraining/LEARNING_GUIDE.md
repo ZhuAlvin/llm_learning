@@ -32,9 +32,9 @@
 
 | 章节 | 先回答的问题 | 生活化示例 | 最低完成标准 | 产出物 |
 |---|---|---|---|---|
-| `01_advanced_optimization.ipynb` | 为什么同模型会出现不同收敛表现？ | 新策略上线前训练波动大 | 完成一次优化器与调度器对比实验 | 收敛对比记录 |
-| `02_distributed_training.ipynb` | 如何把训练从单卡扩展到多卡？ | 大促前需要压缩迭代周期 | 跑通一个分布式训练最小案例 | 并行配置模板 |
-| `03_efficient_training.ipynb` | 如何在有限显存下训练更大模型？ | 单卡显存不足但要保留效果 | 完成混合精度或梯度检查点实验 | 显存-速度报告 |
+| [`01_advanced_optimization.ipynb`](./01_advanced_optimization.ipynb) | 为什么同模型会出现不同收敛表现？ | 新策略上线前训练波动大 | 完成一次优化器与调度器对比实验 | 收敛对比记录 |
+| [`02_distributed_training.ipynb`](./02_distributed_training.ipynb) | 如何把训练从单卡扩展到多卡？ | 大促前需要压缩迭代周期 | 跑通一个分布式训练最小案例 | 并行配置模板 |
+| [`03_efficient_training.ipynb`](./03_efficient_training.ipynb) | 如何在有限显存下训练更大模型？ | 单卡显存不足但要保留效果 | 完成混合精度或梯度检查点实验 | 显存-速度报告 |
 
 ---
 

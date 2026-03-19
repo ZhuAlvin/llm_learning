@@ -32,9 +32,9 @@
 
 | 章节 | 先回答的问题 | 生活化示例 | 最低完成标准 | 产出物 |
 |---|---|---|---|---|
-| `01_inference_optimization.ipynb` | 延迟和成本如何同时优化？ | 用户等待超时导致会话中断 | 完成量化/剪枝至少一项并给收益 | 推理优化报告 |
-| `02_model_serving.ipynb` | 如何把模型封装成可扩展服务？ | 大促咨询量激增时保持可用 | 部署一个可访问 API 并完成基础压测 | 服务原型 |
-| `03_production_best_practices.ipynb` | 如何建立监控、告警、回滚机制？ | 线上错误回复触发事故响应 | 完成一次灰度发布或回滚演练 | 运行手册 |
+| [`01_inference_optimization.ipynb`](./01_inference_optimization.ipynb) | 延迟和成本如何同时优化？ | 用户等待超时导致会话中断 | 完成量化/剪枝至少一项并给收益 | 推理优化报告 |
+| [`02_model_serving.ipynb`](./02_model_serving.ipynb) | 如何把模型封装成可扩展服务？ | 大促咨询量激增时保持可用 | 部署一个可访问 API 并完成基础压测 | 服务原型 |
+| [`03_production_best_practices.ipynb`](./03_production_best_practices.ipynb) | 如何建立监控、告警、回滚机制？ | 线上错误回复触发事故响应 | 完成一次灰度发布或回滚演练 | 运行手册 |
 
 ---
 
