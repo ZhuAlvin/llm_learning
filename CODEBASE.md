@@ -1581,6 +1581,17 @@ llm-learning-guide/
 
 ## 更新日志
 
+### 2026-03-19
+- ✅ 修复质量分布表统计范围说明（明确为已评估 18 个 Notebooks，M4-M9）
+- ✅ 统一 Module 5 学习时间（README 与 LEARNING_GUIDE 一致，9-12 小时）
+- ✅ 补全 M1-M4、M6-M7 完整模块指南链接
+- ✅ 统一 Module 8 前置要求描述（与 LEARNING_GUIDE 对齐）
+- ✅ SETUP.md 新增 Apple Silicon (M1/M2/M3) MPS 配置节
+- ✅ 主 README 新增先修知识说明小节
+- ✅ 全部 LEARNING_GUIDE 的 Notebook 名称改为可点击相对路径链接
+- ✅ Module 9 产出物模板移至文末附录节，不再干扰章节地图
+- ✅ ROI 缩写规范化（首次出现标注中英文全称）
+
 ### 2026-03-06
 - ✅ Notebook 标准结构新增 `🏢 业务场景` 子节（核心问题之后、知识地图之前）
 - ✅ 29/29 notebooks 已全部添加业务场景锚点，与 README 业务问题映射对齐
