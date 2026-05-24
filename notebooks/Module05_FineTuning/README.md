@@ -88,6 +88,7 @@
 **业务问题映射**：
 - “显存只够 8GB，怎么微调 7B 模型？” -> LoRA 低秩适配
 - “多个活动规则同时上线如何切换？” -> 多任务 PEFT 部署
+- “商品图片分类模型也要微调，能用同一套 LoRA 方法吗？” -> LoRA for ViT / 视觉 PEFT（详见 Module 10）
 
 
 **亮点**:
@@ -275,6 +276,23 @@
 - **正则化**: EWC, L2
 - **重放**: Experience Replay
 - **架构**: Adapter per task
+
+### Q6: LoRA 能用于视觉模型吗？ 🎥
+
+**A**: 可以，且效果同样显著。LoRA 论文 (Hu et al., 2021) 最初就在 ViT (Vision Transformer, 视觉 Transformer) 和 CLIP 上验证过：
+
+| 视觉任务 | 推荐方法 | 典型 rank | 可训练参数 | 精度保持 |
+|---------|---------|----------|-----------|---------|
+| 图像分类 | LoRA (Q, V) | r=4-8 | < 0.5% | 99%+ |
+| 目标检测 | LoRA (Q, V, MLP) | r=8-16 | < 1% | 98%+ |
+| 图像分割 | LoRA + Adapter | r=16-32 | < 2% | 97%+ |
+
+**与 NLP LoRA 的关键差异**：
+- 注入位置相同（Attention 的 Q/V 投影），ViT 和 LLM 的 Transformer 结构一致
+- 视觉模型的特征图维度更高（H × W × C），需要更大的 rank 来捕获空间细节
+- 数据增强（mixup, cutmix）在视觉 PEFT 中比 NLP 更关键
+
+> 🎥 **多模态视角**：完整的视觉 PEFT 实战（LoRA for ViT、多分支管理、增量类别学习）见 **Module 10.4: 场景微调与边缘部署**。
 
 ---
 

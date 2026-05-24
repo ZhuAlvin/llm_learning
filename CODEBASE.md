@@ -553,6 +553,7 @@ $$\text{scores} = \frac{QK^T}{\sqrt{d_k}}$$
 - `Module07_Deployment` - 部署与优化
 - `Module08_Applications` - 实际应用
 - `Module09_Frontiers` - 前沿探索
+- `Module10_Multimodal` - 多模态小模型应用
 
 ### 代码文件命名
 
@@ -1203,6 +1204,7 @@ python scripts/test_environment.py
 | Module 7: Deployment | 3 个 | 92/100 | ✅ |
 | Module 8: Applications | 3 个 | 95.3/100 | ✅ 🏆 |
 | Module 9: Frontiers | 3 个 | 96.0/100 | ✅ 🏆 |
+| Module 10: Multimodal | 4 个 | 待评估 | ✅ 🆕 |
 
 **已评估平均分**: 93.7/100 ⭐⭐⭐⭐⭐
 
@@ -1218,8 +1220,9 @@ python scripts/test_environment.py
 - ✅ Module07_Deployment/README.md
 - ✅ Module08_Applications/README.md
 - ✅ Module09_Frontiers/README.md
+- ✅ Module10_Multimodal/README.md
 
-**学习指南文档** (9/9 完成):
+**学习指南文档** (10/10 完成):
 - ✅ Module01_Foundation/LEARNING_GUIDE.md
 - ✅ Module02_Evolution/LEARNING_GUIDE.md
 - ✅ Module03_Transformer/LEARNING_GUIDE.md
@@ -1229,6 +1232,7 @@ python scripts/test_environment.py
 - ✅ Module07_Deployment/LEARNING_GUIDE.md
 - ✅ Module08_Applications/LEARNING_GUIDE.md
 - ✅ Module09_Frontiers/LEARNING_GUIDE.md
+- ✅ Module10_Multimodal/LEARNING_GUIDE.md
 
 ### 质量报告
 
@@ -1378,6 +1382,7 @@ stable_softmax = np.exp(scores - np.max(scores)) / np.sum(np.exp(scores - np.max
 7. `Module07_Deployment` - 部署与优化
 8. `Module08_Applications` - 实际应用
 9. `Module09_Frontiers` - 前沿探索
+10. `Module10_Multimodal` - 多模态小模型应用
 
 **注意事项**：
 - 保持现有命名一致性
@@ -1514,12 +1519,20 @@ llm-learning-guide/
 │   │   ├── 02_agent_systems_mcp.ipynb
 │   │   └── 03_frontend_integration.ipynb
 │   │
-│   └── Module09_Frontiers/             # 前沿探索（3 个 notebooks）🏆
+│   ├── Module09_Frontiers/             # 前沿探索（3 个 notebooks）🏆
+│   │   ├── README.md
+│   │   ├── LEARNING_GUIDE.md
+│   │   ├── 01_emerging_architectures.ipynb
+│   │   ├── 02_advanced_training.ipynb
+│   │   └── 03_research_frontiers.ipynb  # ⭐ 97/100
+│   │
+│   └── Module10_Multimodal/             # 多模态小模型应用（4 个 notebooks）🆕
 │       ├── README.md
 │       ├── LEARNING_GUIDE.md
-│       ├── 01_emerging_architectures.ipynb
-│       ├── 02_advanced_training.ipynb
-│       └── 03_research_frontiers.ipynb  # ⭐ 97/100
+│       ├── 01_multimodal_foundations.ipynb
+│       ├── 02_image_recognition.ipynb
+│       ├── 03_video_understanding.ipynb
+│       └── 04_edge_deployment.ipynb
 │
 ├── src/                                # 可复用代码库
 │   ├── __init__.py
