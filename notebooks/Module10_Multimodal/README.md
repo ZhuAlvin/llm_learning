@@ -5,9 +5,9 @@
 本模块是课程的**多模态综合实战**。它建立在 NLP 主线中学到的核心技术之上，将它们应用到视觉和多模态场景：
 
 > 🤝 **双主线连接**：本模块与 NLP 主线（Module 1-9）形成**双主线并行**结构：
-> - **Module 5 (Fine-tuning)** 教的 LoRA → 在 10.4 中用于 ViT 和 CLIP 的视觉微调
-> - **Module 7 (Deployment)** 教的量化/ONNX → 在 10.4 中扩展到边缘设备的 TensorRT 部署
-> - **Module 8 (Applications)** 教的向量检索/RAG → 在 10.2 中扩展为以图搜图和多模态检索
+> - **Module 5 (Fine-tuning)** 教的 LoRA (Low-Rank Adaptation, 低秩适应) → 在 10.4 中用于 ViT (Vision Transformer, 视觉 Transformer) 和 CLIP (Contrastive Language-Image Pre-training) 的视觉微调
+> - **Module 7 (Deployment)** 教的量化 / ONNX (Open Neural Network Exchange) → 在 10.4 中扩展到边缘设备的 TensorRT 部署
+> - **Module 8 (Applications)** 教的向量检索 / RAG → 在 10.2 中扩展为以图搜图和多模态检索
 
 你将基于统一主线案例 `通用多模态平台`，掌握从模型选型、场景应用到边缘部署的完整链路。
 
