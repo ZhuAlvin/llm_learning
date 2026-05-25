@@ -369,6 +369,7 @@
 
 - **Module 8**: 实际应用（RAG系统、Agent开发）
 - **Module 9**: 前沿探索（新兴架构、研究前沿）
+- **Module 10**: 多模态小模型应用（INT8 量化 + ONNX/TensorRT 边缘部署实战）
 
 ---
 

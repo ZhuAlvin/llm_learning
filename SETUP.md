@@ -161,7 +161,28 @@ pip install chromadb langchain llama-index
 
 > **注意**：以上组件是 Module 8 (`01_rag_systems.ipynb`) 的运行依赖，不安装将导致 `ImportError`。如只学习 Module 1-7，可跳过此步骤。
 
-### 5.3 实验追踪（可选）
+### 5.3 Module 10 多模态与边缘部署依赖
+
+Module 10 涉及图像/视频模型与边缘部署，需要额外安装以下依赖：
+
+```bash
+# 核心依赖
+pip install timm>=0.9.0                  # 预训练视觉模型库
+pip install albumentations               # 图像数据增强
+pip install opencv-python-headless       # 视频处理
+pip install onnxruntime>=1.15.0          # ONNX 推理
+pip install onnx>=1.14.0                 # ONNX 模型导出
+
+# 可选依赖
+pip install faiss-cpu                    # 向量检索（以图搜图）
+pip install decord                       # 高性能视频解码
+pip install fastapi uvicorn[standard]    # 推理 API 服务
+pip install docker                       # Docker SDK（容器化部署）
+```
+
+> **注意**：Module 10 的 notebook 在 CPU 环境下即可完整运行。部分训练 cell 已针对 CPU 做了轻量化处理（1 batch / 1 epoch 验证模式），完整训练建议在 GPU 环境下进行。
+
+### 5.4 实验追踪（可选）
 
 ```bash
 pip install wandb
