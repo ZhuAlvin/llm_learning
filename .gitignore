@@ -122,3 +122,5 @@ htmlcov/
 # Compiled files
 *.pyc
 *.pyo
+notebooks/*/data/
+notebooks/multimodal_platform/
