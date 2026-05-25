@@ -189,7 +189,7 @@
 
 ---
 
-### Module 10: 多模态小模型应用 (Multimodal Small Models) 🆕
+### Module 10: 多模态小模型应用（便利店货架监控示范）🆕
 **4 个 Notebooks | 预计 12-15 小时**
 
 - 01 - 多模态小模型基础与选型（架构全景、CLIP 对齐、benchmark 选型框架）
